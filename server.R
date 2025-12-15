@@ -81,7 +81,7 @@ shinyServer(function(input, output, session) {
 
   observeEvent(input$category1, {
     output$x3 = DT::renderDataTable(
-      subset(dat, `Data source` == "Quest"),
+      subset(dat, `Data source` == "quest"),
       rownames = FALSE
     )
   })
