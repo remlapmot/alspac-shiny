@@ -23,17 +23,17 @@ names(dat) <- c(
   "Counts",
   "Type",
   "Release",
-  "Label 1",
-  "Label 2",
-  "Label 3"
+  "Data source",
+  "Generation",
+  "Who completed"
 )
 
 rownames(dat) <- NULL
 
 labs <- table(c(
-  dat$"Label 1",
-  dat$"Label 2",
-  dat$"Label 3"
+  dat$"Data source",
+  dat$"Generation",
+  dat$"Who completed"
 ))
 labs <- labs[labs > 10] %>% sort(decreasing = TRUE)
 
@@ -84,7 +84,7 @@ shinyServer(function(input, output, session) {
 
   observeEvent(input$category1, {
     output$x3 = DT::renderDataTable(
-      subset(dat, `Label 1` == "Quest"),
+      subset(dat, `Data source` == "Quest"),
       rownames = FALSE
     )
   })
