@@ -2,6 +2,7 @@ library(shiny)
 library(DT)
 library(alspac)
 library(dplyr)
+library(stringi)
 
 data(current)
 # data(useful)
@@ -26,6 +27,9 @@ names(dat) <- c(
 )
 
 rownames(dat) <- NULL
+
+dat <- dat %>%
+  dplyr::arrange(Variable, .locale = "en")
 
 labs <- table(c(
   dat$"Data source",
