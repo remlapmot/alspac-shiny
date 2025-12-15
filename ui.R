@@ -57,7 +57,7 @@ aboutpage <- function()
 
 		# Jumbotron
 		div(
-			class="jumbotron", 
+			class="jumbotron",
 			position="bottom",
 			h1("Search for variables collected in the ALSPAC study"),
 			p(
@@ -70,12 +70,12 @@ aboutpage <- function()
 		fluidRow(
 			column(6,
 				fluidRow(column(12, panel_div(
-					class_type="primary", 
+					class_type="primary",
 					panel_title="The ALSPAC data resource",
 					content=
 						div(
 							fluidRow(
-								column(12, 
+								column(12,
 							tags$p("The Avon Longitudinal Study of Parents and Children (ALSPAC), also known as Children of the 90s, is a world-leading birth cohort study, charting the health of 14,500 families in the Bristol area. You can find full information about the cohort ", tags$a("here", href="https://www.bristol.ac.uk/alspac/")),
 							HTML("<button class='btn btn-default action-button' onclick=\"window.location.href='https://www.bristol.ac.uk/alspac/'\">ALSPAC webpage</button>"),
 							tags$p()
@@ -88,7 +88,7 @@ aboutpage <- function()
 				))),
 
 				fluidRow(column(12, panel_div(
-					class_type="primary", 
+					class_type="primary",
 					panel_title="The variable search tool",
 					content=
 						div(
@@ -99,7 +99,7 @@ aboutpage <- function()
 						)
 				))),
 
-				fluidRow(column(12, 
+				fluidRow(column(12,
 					p("Source code at ", tags$a("https://github.com/explodecomputer/alspac-shiny", href="https://github.com/explodecomputer/alspac-shiny"))
 				))
 			),
@@ -129,13 +129,13 @@ variablespage <- function()
 				# ),
 				h2("Freely browse available ALSPAC data by variable name"),
 				tags$br(),
-				fluidRow(column(12, 
+				fluidRow(column(12,
 					DT::dataTableOutput('x3')
 				))
 			),
 			column(3,
 				fluidRow(
-					column(12, 
+					column(12,
 						h3("Instructions"),
 						p("Use the search box to filter on keywords or terms. Click on rows to select those variables. Click the Download button to download a csv of the variables that you have selected."),
 						p("If there is anything you cannot find, please consult the ", tags$a("data dictionary or variables catalog", href="http://www.bristol.ac.uk/alspac/researchers/our-data/"), ". You can also get help from the team at", tags$a("ALSPAC-data@bristol.ac.uk", href="mailto:alspac-data@bristol.ac.uk"), "."),
@@ -168,4 +168,3 @@ shinyUI(navbarPage(
 	variablespage()
 
 ))
-	

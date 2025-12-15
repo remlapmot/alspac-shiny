@@ -27,7 +27,7 @@ print_rows <- function(s, dat)
 {
 	if(length(s) == 0)
 	{
-		cat("(none)")		
+		cat("(none)")
 	} else {
 		cat(paste0(dat$Variable[s], ": ", dat$Details[s]), sep='\n')
 	}
@@ -40,7 +40,7 @@ shinyServer(function(input, output, session) {
 	})
 
 	output$laba <- 	renderUI({
-		HTML(sapply(names(labs), 
+		HTML(sapply(names(labs),
 			function(x) paste0("<button id='category", which(names(labs) == x)[1], "' action='toggle' class='btn btn-default action-button btn-xs' style='margin-bottom: 3px'>", x, " (", labs[names(labs) == x], ")</button>")) %>%
 			paste(collapse=" "))
 	})
@@ -85,6 +85,3 @@ shinyServer(function(input, output, session) {
 		})
 
 })
-
-
-
