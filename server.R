@@ -9,7 +9,7 @@ data(current)
 current <- subset(
   current,
   !name %in% c("aln", "qlet"),
-  select = c(obj, name, lab, counts, type, cat1, cat2, cat3, cat4)
+  select = c(obj, name, lab, cat2, cat3, cat4)
 )
 # useful <- subset(useful, ! name %in% c("aln", "qlet"), select=c(obj, name, lab, counts, type, cat1, cat2, cat3, cat4))
 
@@ -20,9 +20,6 @@ names(dat) <- c(
   "Dataset",
   "Variable",
   "Details",
-  "Counts",
-  "Type",
-  "Release",
   "Data source",
   "Generation",
   "Who completed"
