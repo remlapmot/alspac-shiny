@@ -56,11 +56,11 @@ shinyServer(function(input, output, session) {
 	})
 
 
-	output$x3 = DT::renderDataTable(dat)
+	output$x3 = DT::renderDataTable(dat, rownames = FALSE)
 
 
 	observeEvent(input$category1, {
-		output$x3 = DT::renderDataTable(subset(dat, `Label 1` == "Quest"))
+		output$x3 = DT::renderDataTable(subset(dat, `Label 1` == "Quest"), rownames = FALSE)
 
 	})
 
