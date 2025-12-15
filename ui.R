@@ -50,13 +50,6 @@ aboutpage <- function() {
     title = "About",
     value = "aboutpage",
     icon = icon("cog", verify_fa = FALSE), # nolint
-    tags$head(
-      # nolint
-      includeScript(
-        "https://www.googletagmanager.com/gtag/js?id=UA-53610054-3"
-      ),
-      includeScript("google-analytics.js")
-    ),
 
     # Jumbotron
     div(
